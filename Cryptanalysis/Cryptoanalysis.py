@@ -39,13 +39,12 @@ while True:
   for i in range(len(lineArr)): # traversing throught the array.
     for j in range(len(lineArr[i])): # going through each letter of the word.
         for k,v in decoder.items():
-          if(lineArr[i][j] == k): # converting the decrypted alphabet to the orignal alphabet using decoder dictionary.
+          if(lineArr[i][j] == k): # converting the ecrypted alphabet to the orignal alphabet using decoder dictionary.
             string += v
     lineArr[i] = string # converting an encrypted word to decrypted word.
     string = ""
   lineOutput = ' '.join(lineArr) # converting the array in a single string seprated by space.
   output.write(lineOutput)
   output.write("\n")
-  #print(st)
 output.close()
  
